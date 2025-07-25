@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
     <title>Prabhjot's Portfolio</title>
@@ -7,7 +6,36 @@
             font-family: Arial, sans-serif;
             background-color: aliceblue; 
             color: dimgray;
-            margin: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* --- Navigation Bar --- */
+        .navbar {
+            background-color: darkslategray;
+            padding: 15px 0;
+            text-align: center;
+            margin-top: 20px;
+            border-radius: 10px;
+            position: sticky; /* Makes the navbar stick */
+            top: 0; /* Sticks to the top of the viewport */
+            z-index: 1000; /* Ensures it stays on top of other content */
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .navbar a:hover {
+            background-color: royalblue;
+            border-radius: 5px;
+        }
+
+        /* --- Main Wrapper --- */
+        .wrapper {
+            padding: 20px;
         }
 
         .header {
@@ -17,10 +45,13 @@
             padding: 20px;
             border-radius: 10px;
         }
-
         .header h1 {
             color: darkslategray; 
             margin: 0;
+        }
+        .header .subtitle {
+            font-size: 18px;
+            margin-top: 5px;
         }
 
         .profile-pic {
@@ -32,43 +63,48 @@
             border: 3px solid dodgerblue; 
         }
         
-        .friend-pic {
-            border-radius: 50%;
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
-            border: 3px solid gold; 
+        /* --- Section Styling --- */
+        .section {
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+        .section h2 {
+            color: royalblue;
+            border-bottom: 2px solid lightgray;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        .section ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+        .section li {
+            margin-bottom: 10px;
+        }
+        .date-span {
+            font-style: italic;
+            color: slategray;
         }
 
-        
         .attributes-container {
             display: flex;
             justify-content: space-around;
             background-color: whitesmoke; 
             padding: 15px;
             border-radius: 8px;
-        }
-
-        .attributes-container h2 {
-            color: royalblue; 
-        }
-
-        .friends-container {
-            display: flex;
-            justify-content: space-around;
-            text-align: center;
-            background-color: white;
-            padding: 20px;
             margin-top: 20px;
         }
-        
-        .friends-container h2 {
-            color: firebrick; 
+        .attributes-container h3 {
+            color: royalblue; 
+            border-bottom: none;
         }
 
         hr {
             border: 0;
             height: 1px;
+            background-color: lightgray;
             margin: 30px 0;
         }
 
@@ -84,64 +120,100 @@
             border: none;
             border-radius: 25px;
             font-size: 16px;
+            cursor: pointer;
         }
-
-        
     </style>
 </head>
 <body>
 
-    <div class="header">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqVnWptCrVdKanRNozaET9t_0Bku4FyvbHSg&s" alt="Profile Picture" class="profile-pic">
-        <h1>Prabhjot Kaur</h1>
-    </div>
+    <div class="wrapper">
+        <div class="section">
+            <h2 style="text-align: center; border-bottom: none;">Welcome to my Portfolio!</h2>
+            <p style="text-align: center;">Explore through my portfolio using the navigation bar below.</p>
+        </div>
 
-    <p style="padding: 15px 0;">Welcome to My Portfolio!</p>
-    <p>Ambitious in Data Science with excellent time management and problem-solving skills. Looking for career advancement opportunities to be a part of a company which can provide me a platform to apply my talent and skill for executing in any kind of work. My teamwork skills always propel me to give my best performance for the overall performance of the group.</p>
+        <!-- Navigation Bar -->
+        <div class="navbar">
+            <a href="#about">About Me</a>
+            <a href="#experience">Experience</a>
+            <a href="#education">Education</a>
+            <a href="#projects">Projects</a>
+            <a href="#personal">Personal</a>
+        </div>
 
-    <hr>
+        <div id="about" class="header">
+            <img src="C:\Users\Hp\Downloads\Passport Size photo  (2).jpg" alt="Profile Picture" class="profile-pic">
+            <div>
+                <h1>Prabhjot Kaur</h1>
+                <p class="subtitle">Aspiring Data Scientist</p>
+                <p>Ambitious in Data Science with excellent time management and problem-solving skills. Looking for career advancement opportunities to be a part of a company which can provide me a platform to apply my talent and skill for executing in any kind of work. My teamwork skills always propel me to give my best performance for the overall performance of the group.</p>
+            </div>
+        </div>
 
-    <div class="attributes-container">
-        <div>
-            <h2>Positive Attributes</h2>
+        <div id="experience" class="section">
+            <h2>Experience</h2>
+            <h3>Associate Software Engineer</h3>
+            <p><b>Company:</b> CAPGEMINI</p>
+            <p class="date-span">November 2024 - March 2025</p>
             <ul>
-                <li>Quick Learner</li>
-                <li>Good Listener</li>
-                <li>Good Speaker</li>
+                <li>Worked on the Dassault Falcon Jet project, contributing to development and support tasks.</li>
+                <li>Collaborated with cross-functional teams to implement software solutions and ensure project milestones.</li>
             </ul>
         </div>
-        <div>
-            <h2>Negative Attributes</h2>
+
+        <div id="education" class="section">
+            <h2>Education</h2>
+            <h3>Master of Computer Applications (MCA)</h3>
+            <p><b>University:</b> Lovely Professional University</p>
+            <p class="date-span">Currently Pursuing</p>
+            <hr>
+            <h3>Bachelor of Commerce (B.Com)</h3>
+            <p><b>University:</b> Lovely Professional University</p>
+            <p class="date-span">Graduated August 2024</p>
+        </div>
+
+        <div id="projects" class="section">
+            <h2>Projects</h2>
+            <h3>Ecommerce Sales Dashboard</h3>
             <ul>
-                <li>Do Multitasking</li>
-                <li>Mobile Addiction</li>
-                <li>Overthink Sometimes</li>
+                <li>Developed a dynamic dashboard in Power BI for sales performance analysis.</li>
+                <li>Implemented customizable filters for interactive reporting.</li>
+            </ul>
+            <hr>
+            <h3>Credit Card Spending Analysis</h3>
+            <ul>
+                <li>Analyzed spending patterns of 100K+ users for predictive modeling.</li>
+                <li>Visualized insights using Matplotlib and Seaborn.</li>
             </ul>
         </div>
-    </div>
 
-    <hr>
+        <div id="personal" class="section">
+            <h2>Personal Insights</h2>
+            <div id="attributes-section">
+                <div class="attributes-container">
+                    <div>
+                        <h3>Positive Attributes</h3>
+                        <ul>
+                            <li>Quick Learner</li>
+                            <li>Good Listener</li>
+                            <li>Good Speaker</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Areas for Growth</h3>
+                        <ul>
+                            <li>Detail-oriented and thorough in my analysis</li>
+                            <li>Passionate about handling diverse tasks</li>
+                            <li>Always connected and up-to-date with technology</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <div style="text-align: center;">
-        <h2>My Friends</h2>
-    </div>
-    <div class="friends-container">
-        <div>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNH0se18bC6fBhfdpy9xQDUB_zLZe96POJxi_BVB2rwHHIc8l_w8iOqD5E22NojvnxnXY&usqp=CAU" alt="Picture of Sara" class="friend-pic">
-            <p>Sara</p>
+        <div class="button-container">
+            <button class="thank-you-button">Thank You!</button>
         </div>
-        <div>
-            <img src="data:image/jpeg;base64,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">
-            <p>Aman</p>
-        </div>
-        <div>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQemFWlOIlvrzPxdjVJgjay0EM6loLLcsgNbIhEk2FJEEu1d9vwfAV9z7VaE53eHRpev_4&usqp=CAU" alt="Picture of Era" class="friend-pic">
-            <p>Era</p>
-        </div>
-    </div>
-
-    <div class="button-container">
-        <button class="thank-you-button">Thank You!</button>
     </div>
 
 </body>
