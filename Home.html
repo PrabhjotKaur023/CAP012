@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My first web page</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <h1>Welcome to my first web page</h1>
+    <img src="./assets/images/shinchan.jpg">
+    <button class="first-button">click me!</button>
+    <button class="second-button"oneclick="toggleBorder(this)">Another Button
+    </button>
+</body>
+<script>
+    function toggleBorder(btn){
+        btn.classList.toggle('clicked');
+    }
+</script>
+
+</html>

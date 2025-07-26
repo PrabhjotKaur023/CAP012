@@ -1,0 +1,32 @@
+.first-button{
+
+    background-color: blue;
+    color: rgb(241, 248, 111);
+    padding: 10px 20px;
+    border: none;
+    margin: 20px;
+}
+button:hover{
+
+    background-color:blueviolet;
+    cursor:pointer;
+}
+img{
+    border:2px solid goldenrod;
+    border-radius: 20%;
+    
+}
+.second-button{
+    background-color: red;
+    color: skyblue;
+    padding: 10px 20px;
+    margin: 20px;
+}
+button.clicked{
+    border-color: yellow;
+    border width: 5px;
+}
+body{
+    background-color: cadetblue;
+
+}
